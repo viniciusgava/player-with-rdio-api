@@ -1,0 +1,37 @@
+<?php echo $this->doctype(); ?>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Player</title>
+
+        <?php
+        echo $this->headMeta()
+                ->appendName('viewport', 'width=device-width, initial-scale=1.0')
+                ->appendHttpEquiv('X-UA-Compatible', 'IE=edge')
+        ?>
+
+        <?php echo $this->HeadLink()->prependStylesheet($this->basePath() . '/css/style.css') ?>
+
+        <?php
+        echo $this->headScript()
+                ->prependFile($this->basePath() . '/js/player.js')
+                ->prependFile($this->basePath() . '/js/jquery.min.js')
+        ?>
+
+    </head>
+    <body>      
+        <div class="main">
+            <div class="top">
+                <h1>Player</h1>
+            </div>
+            <div class="content">
+                <?php echo $this->content; ?>    
+            </div>
+            <div class="footer">
+                
+            </div>
+            <?php echo $this->inlineScript() ?>
+        </div>
+    </body>
+</html>

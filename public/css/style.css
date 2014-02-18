@@ -1,0 +1,70 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.main{
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+
+.main .top{
+    width: 915px;
+        height: 80px; 
+        overflow: hidden;
+        margin: 5px auto 0 auto;
+        font-size: 30px;
+        text-align: center;
+}
+.main .content{
+    width: 915px;
+        height: auto; 
+        overflow: hidden;
+        margin: 5px auto 50px auto;
+}
+
+.main .content .player-container{
+    float: left;
+    width: 700px;
+    height: auto; 
+    overflow: hidden;
+    margin-right: 15px;
+}
+.main .content .player-container .player{
+    width: 700px; 
+    height: 200px;
+    background: red;
+    margin-bottom: 15px;
+}
+.main .content .player-container .playlist{
+    width: 700px; 
+    height: 200px;
+    background: blue;
+    margin-bottom: 15px;
+}
+.main .content .player-container .search{
+    width: 700px;
+    height: 455px;
+    overflow: hidden;
+    background: purple;
+    margin-bottom: 25px;
+}
+.main .content .player-container .search .query{
+    width: 700px; 
+    height: 50px;
+    background: gray;
+    margin-bottom: 5px;
+}
+.main .content .player-container .search .result{
+    width: 700px; 
+    height: 400px;
+    background: black;
+}
+
+.main .content .sugestion{ 
+    float: left;
+    width: 200px;
+    height: 414px;
+    background: brown;    
+}
