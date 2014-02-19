@@ -1,20 +1,50 @@
 <div class="player-container">
-    <div class="player">
-        
-    </div>
-    <div class="playlist">
-
-    </div>
-    <div class="search">
-        <div class="query">
-
+    <div class="player boxtheme">
+        <div class="name" id="name">
+            <div class="first">
+                - - -                
+            </div>
+            <div class="second">
+                - - -                
+            </div>
         </div>
-        <div class="result">
+        <div class="progress">
+            <div class="current-time" id="current-time">00:00</div>
+            <div class="progress-bar" id="progress-bar"></div>
+            <div class="total-time" id="total-time">00:00</div>
+        </div>
+        <div class="controls" id="controls">
+            <div id="volume" class="volume" style="width:150px; height: 10px; margin:9px 15px 0 15px;"></div>
+            <div class="buttons">
+                <button class="button" id="beginning"></button>
+                <button class="button" id="play"></button>
+                <button class="button" id="pause"></button>
+                <button class="button" id="end"></button>
+            </div>
+        </div>
+        <div id="apiswf"></div>
 
+    </div>
+    <div class="playlist boxtheme" id="playlist">
+        <h2>Play List</h2>
+        <div class="over">
+            <ul class="list">
+
+            </ul>
+        </div>
+    </div>
+    <div class="search boxtheme">
+        <div class="query">
+            <input type="text" placeholder="Digite o nome da música" class="term" id="term" />
+            <button type="button" id="queryok">Ok</button>
+        </div>
+        <div class="results-container" id="results-container">
+            <ul class="results">                
+            </ul>                             
         </div>
 
     </div>
 </div>
 <div class="sugestion">
-    
+
 </div>

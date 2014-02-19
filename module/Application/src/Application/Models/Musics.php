@@ -25,7 +25,7 @@ class Musics {
             "query" => $query,
             "types" => "Track"//Artist,Album,
         ));
-
+        
         $return = array();
 
         if ($results->result->number_results > 0) {
@@ -46,9 +46,10 @@ class Musics {
                         }
                     case 't': {
                             $part['type'] = 'track';
-                            $part['title'] = $res->name . ' (' . $this->secondToTime($res->duration) . ')';
-                            ;
-                            $part['additional_info'] = $res->artist . ' - ' . $res->album;
+                            $part['title'] = $res->name;
+                            $part['duration'] = $this->secondToTime($res->duration);
+                            $part['additional_info'] = $res->album;
+                            $part['additional_info2'] = $res->artist;
                             break;
                         }
                 }

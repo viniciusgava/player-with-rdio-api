@@ -12,8 +12,10 @@ namespace Application\Controller;
 
 use Zend\Mvc\Controller\AbstractActionController;
 use Zend\View\Model\JsonModel;
+use Application\Tools\AjaxResponse;
 
 class PlayerController extends AbstractActionController {
+    use AjaxResponse;
 
     /**
      *
@@ -36,13 +38,17 @@ class PlayerController extends AbstractActionController {
 
         $return = $this->musics->search($query);
 
-        return $this->response;
+        return $this->ajaxResponse(true,$return);
     }
 
     public function playbacktokenAction() {
         $this->musics = $this->getServiceLocator()->get('Application\Musics');
 
-        $token = $this->musics->getPlaybackToken($_SERVER["HTTP_HOST"]);
+        $domain = parse_url($_SERVER['HTTP_HOST'],PHP_URL_HOST);
+                
+        $token = $this->musics->getPlaybackToken($domain);
+                
+        return $this->ajaxResponse(true,['domain' => $domain, 'token' => $token->result]);
         
     }
 
