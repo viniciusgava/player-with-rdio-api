@@ -19,6 +19,7 @@ Go to "/module/Application/config/module.config.php" and add your "key" and "sec
 
 
 Remember of create a virtualhost or use this command in project directory to run(php 5.4 >).
+
     php -S 127.0.0.1:8888
 
 Reference: https://www.rdio.com/developers/
